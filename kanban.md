@@ -2,6 +2,7 @@
 
 - build dictionary
 - add tmux plugin install
+- create run script
 
 ## Doing
 

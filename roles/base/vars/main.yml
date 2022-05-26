@@ -72,15 +72,12 @@ packages:
   - solidity
   ## packages
   - flatpak
-  - libpamac-flatpak-plugin
-  - libpamac
-  - pamac-cli
-  - pamac-gtk
   # Apps
   - aspell
   - aspell-en
   - firefox
   - rofi
   - rofi-calc
-    # security
+  - trayer
+  # security
   - pam-u2f

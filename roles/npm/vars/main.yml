@@ -6,6 +6,7 @@ npm_global_packages:
 
   # cli
   - clipboard-cli  # universal cli tool
+  - json
 
   # clojurescript dev
   - shadow-cljs

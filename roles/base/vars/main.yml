@@ -19,10 +19,11 @@ packages:
   - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio
   - pipewire-alsa # alsa compat with pipewire, uninstalls alsa
   - wireplumber
-  - yamllint
   # dev
   - go
   - lua-language-server
+  - yaml-language-server
+  - yamllint
   ## haskell
   - stack
   ## terminal
@@ -34,7 +35,9 @@ packages:
   - exa  # like ls but extra
   - fd  # like find but kinder
   - figlet  # make large banners out of ascii
+  - getoptions # bash options parser
   - kitty
+  - lazygit
   - neovim
   - procs  # rusty processes
   - ripgrep

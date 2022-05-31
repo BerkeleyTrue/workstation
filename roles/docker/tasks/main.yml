@@ -1,0 +1,17 @@
+---
+- name: Ensure docker is installed
+  pacman:
+    name: docker
+    state: present
+
+- name: Ensure docker group exits
+  group:
+    name: docker
+    system: true
+
+- name: Ensure my user is in docker group
+  user:
+    groups:
+      - docker
+    name: '{{ user }}'
+    append: true

@@ -2,6 +2,9 @@
 packages:
   # general
   - base-devel
+  - blueman
+  - bluez
+  - bluez-utils
   - curl
   - git
   - github-cli

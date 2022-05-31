@@ -11,12 +11,12 @@
     - init
 
 - name: Ensure user log files
-  ansible.builtin.file:
-    path: '{{ item }}'
-    state: touch
+  copy:
+    content: ''
+    dest: '{{ item }}'
+    force: false
     mode: 0644 # owner read/write, group read, world read
-  loop:
-    - '{{ user_space_files }}'
+  loop: '{{ user_space_files }}'
 
   tags:
     - user

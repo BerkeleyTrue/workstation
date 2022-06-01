@@ -17,10 +17,14 @@ packages:
   - wget
   - xcape  # key mapping
   # desktop
-  - plasma-desktop # for games
+  - nitrogen
+  - flameshot
+  - pasystray # pulse audio systray
+  - picom # compositor
   - pipewire # audio
-  - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio
   - pipewire-alsa # alsa compat with pipewire, uninstalls alsa
+  - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio
+  - plasma-desktop # for games
   - wireplumber
   # dev
   - go

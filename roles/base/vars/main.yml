@@ -17,6 +17,7 @@ packages:
   - wget
   - xcape  # key mapping
   # desktop
+  - dunst # notification daemon
   - nitrogen
   - flameshot
   - pasystray # pulse audio systray

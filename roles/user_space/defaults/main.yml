@@ -1,5 +1,6 @@
 ---
 user_space_ts_fennel: '{{ ansible_env.HOME }}/dvlpmnt/lisp/fennel/tree-sitter-fennel'
+user_space_hls: '{{ ansible_env.HOME }}/dvlpmnt/haskell/hls'
 user_space_dirs:
   - '{{ user_space_ts_fennel }}'  # required for treesitter since a bug won't allow treesitter to install automatically
   - '{{ ansible_env.HOME }}/docs/notes/captainslog/'  # captains log command in shell/task.sh

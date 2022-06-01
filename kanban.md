@@ -6,7 +6,6 @@
 
 ## Doing
 
-- clone and install haskell-language-server
 - install crypto-egg project in dvl
 
 ## Done
@@ -24,3 +23,4 @@
 - clone  and install fennel ts grammer in dvl
 - remove yadm bootstrap
 - use ansible to install xmonad deps
+- clone and install haskell-language-server

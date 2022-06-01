@@ -110,3 +110,9 @@
     version: master
   tags:
     - fennel
+
+- name: Ensure hls repo
+  git:
+    repo: https://github.com/haskell/haskell-language-server.git
+    dest: '{{ user_space_hls }}'
+    version: 1.7.0.0

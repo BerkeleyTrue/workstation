@@ -10,6 +10,14 @@
     - folders
     - init
 
+- name: Ensure user dir updates is masked
+  systemd:
+    name: xdg-user-dirs-update.service
+    masked: true
+    disabled: true
+    scope: user
+    state: stopped
+
 - name: Ensure user log files
   copy:
     content: ''

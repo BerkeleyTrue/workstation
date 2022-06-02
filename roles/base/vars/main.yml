@@ -16,6 +16,7 @@ packages:
   - unclutter
   - wget
   - xcape  # key mapping
+  - xbindkeys # bind keys to commands
   # desktop
   - dunst # notification daemon
   - flameshot

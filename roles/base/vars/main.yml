@@ -18,14 +18,15 @@ packages:
   - xcape  # key mapping
   # desktop
   - dunst # notification daemon
-  - nitrogen
   - flameshot
+  - nitrogen
   - pasystray # pulse audio systray
   - picom # compositor
   - pipewire # audio
   - pipewire-alsa # alsa compat with pipewire, uninstalls alsa
   - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio
   - plasma-desktop # for games
+  - trayer
   - wireplumber
   # dev
   - go
@@ -87,9 +88,9 @@ packages:
   # Apps
   - aspell
   - aspell-en
+  - chromium
   - firefox
   - rofi
   - rofi-calc
-  - trayer
   # security
   - pam-u2f

@@ -37,6 +37,7 @@ packages:
   - stack
   ## terminal
   - alacritty
+  - aws-cli # needed for work
   - bat  # like cat but rusty
   - dog  # Like dig but a good boi
   - dust  # rust based disk usage utility

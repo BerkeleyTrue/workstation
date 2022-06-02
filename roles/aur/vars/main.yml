@@ -10,7 +10,6 @@ aur:
   - robo3t-bin  # mongodb UI tool
   # terminal
   - antigen-git
-  - aws-cli-v2-bin
   - getoptions # better options parser for posix
   - navi  # interactive CL tool for cheats (sorta like TLDR)
   - toilet  # asci out text

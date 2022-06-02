@@ -50,6 +50,7 @@ packages:
   - kitty
   - lazygit
   - neovim
+  - playerctl # pause/play music players ci
   - procs  # rusty processes
   - ripgrep
   - shfmt

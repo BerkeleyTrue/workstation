@@ -24,6 +24,9 @@ aur:
   - fennel
   - fnlfmt-git
   - joker-bin
+  # go dev
+  - golangci-lint-bin
+  - golangci-lint-langserver-bin
   # words
   - wordnet-common
   - wordnet-cli

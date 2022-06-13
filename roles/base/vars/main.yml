@@ -80,6 +80,9 @@ packages:
   ## node dev
   - nodejs
   - npm
+  ## go Dev
+  - go
+  - go-tools
   ## python
   - python-pip
   - python-setuptools

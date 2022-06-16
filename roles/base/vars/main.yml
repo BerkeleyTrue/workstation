@@ -30,7 +30,6 @@ packages:
   - trayer
   - wireplumber
   # dev
-  - go
   - lua-language-server
   - yaml-language-server
   - yamllint
@@ -82,6 +81,7 @@ packages:
   - npm
   ## go Dev
   - go
+  - gopls # go language server
   - go-tools
   ## python
   - python-pip

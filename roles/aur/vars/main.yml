@@ -6,6 +6,7 @@ aur:
   - lua-format
   - handlr-bin  # mime utils written in rust 🎉
   - bitwarden-cli
+  - kmonad-bin # keyboard configurator
   # DB tools
   - robo3t-bin  # mongodb UI tool
   # terminal

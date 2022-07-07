@@ -8,12 +8,14 @@ packages:
   - gufw  # gui for ufw
   - keybase
   - keybase-gui
-  - pkgfile
+  - pkgfile # determines which package repo a file belongs to, according to /etc/pacman.conf
   - sshguard
-  - ufw
-  - unclutter
+  - ufw # uncomplicated firewall
+  - unclutter # hid mouse when not in use
   - xbindkeys # bind keys to commands
   - xcape  # key mapping
+  - xsecurelock # secure lock screen for x11
+  - xss-lock # hook into X11 screen saver extension
   # networking
   - bind # dns impl w/ dig
   - curl

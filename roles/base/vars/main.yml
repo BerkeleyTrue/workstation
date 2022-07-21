@@ -103,8 +103,6 @@ packages:
   # Apps
   - aspell
   - aspell-en
-  - chromium
-  - firefox
   - rofi
   - rofi-calc
   # security

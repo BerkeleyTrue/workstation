@@ -12,3 +12,4 @@ paks:
   - name: org.chromium.Chromium
   - name: com.vscodium.codium
   - name: org.mozilla.firefox
+  - name: io.github.f3d_app.f3d # stl viewer

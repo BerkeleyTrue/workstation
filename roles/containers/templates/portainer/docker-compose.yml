@@ -7,13 +7,23 @@ services:
     command: -H unix:///var/run/docker.sock
     container_name: portainer
     restart: unless-stopped
+    networks:
+      - web
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
       - portainer-db:/data
-    ports:
-      - 12000:8000
-      - 12443:9443
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
+      - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
+
+      # portainer frontend
+      - traefik.http.routers.portainer-web.entrypoints=web
+      - traefik.http.routers.portainer-web.rule=Host(`portainer.lan`)
+      - traefik.http.routers.portainer-web.service=portainer-frontend-service
+
+      - traefik.http.services.portainer-frontend-service.loadbalancer.server.port=9000
 
 
 
@@ -22,4 +32,5 @@ volumes:
     external: true
 
 networks:
-  host:
+  web:
+    external: true

@@ -13,3 +13,4 @@ paks:
   - name: com.vscodium.codium
   - name: org.mozilla.firefox
   - name: io.github.f3d_app.f3d # stl viewer
+  - name: org.freedesktop.Platform.ffmpeg-full # required for smooth video playback in firefox

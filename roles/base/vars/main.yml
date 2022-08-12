@@ -53,7 +53,6 @@ packages:
   - exa  # like ls but extra
   - fd  # like find but kinder
   - figlet  # make large banners out of ascii
-  - getoptions # bash options parser
   - gfold # search and list git repos
   - kitty
   - lazygit

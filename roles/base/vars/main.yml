@@ -25,6 +25,7 @@ packages:
   - traceroute
   - wget
   # desktop
+  - cbatticon
   - dunst # notification daemon
   - flameshot
   - nitrogen
@@ -35,6 +36,7 @@ packages:
   - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio
   - plasma-desktop # for games
   - trayer
+  - volumeicon
   - wireplumber
   # dev
   - git

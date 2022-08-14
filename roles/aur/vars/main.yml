@@ -5,7 +5,6 @@ aur:
   # general
   - lua-format
   - handlr-bin  # mime utils written in rust 🎉
-  - bitwarden-cli
   - kmonad-bin # keyboard configurator
   # DB tools
   - robo3t-bin  # mongodb UI tool
@@ -14,7 +13,6 @@ aur:
   - getoptions # better options parser for posix
   - navi  # interactive CL tool for cheats (sorta like TLDR)
   - toilet  # asci out text
-  - wakatime-cli-bin  # new go version
   # automation
   - terraform-lsp-git
   # clojure dev
@@ -23,7 +21,6 @@ aur:
   - clojure-lsp-bin
   - clj-kondo-bin
   - fennel
-  - fnlfmt-git
   - joker-bin
   # go dev
   - golangci-lint-bin

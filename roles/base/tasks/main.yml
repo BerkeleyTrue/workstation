@@ -69,7 +69,7 @@
     - name: Ensure tty1 skips usernames
       become: true
       become_user: root
-      ansible.builtin.copy:
+      ansible.builtin.template:
         src: skip-username.conf
         dest: /etc/systemd/system/getty@tty1.service.d/skip-username.conf
         backup: true

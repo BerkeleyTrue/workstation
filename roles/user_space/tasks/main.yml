@@ -14,7 +14,7 @@
   systemd:
     name: xdg-user-dirs-update.service
     masked: true
-    disabled: true
+    enabled: false
     scope: user
     state: stopped
 
@@ -80,15 +80,20 @@
     - init
     - taskwarrior-cron
 
+- name: Gather package facts
+  package_facts:
+
 - name: Disable lightdm
   become: true
   become_user: root
-  systemd:
+  register: service_stop
+  service:
     name: lightdm
     enabled: false
     state: stopped
   tags:
     - systemd
+  when: "'lightdm' in ansible_facts.packages"
 
 - name: Enable docker service
   become: true
@@ -104,6 +109,7 @@
   become: true
   become_user: root
   lineinfile:
+    create: true
     dest: /etc/X11/xorg.conf.d/30-touchpad.conf
     search_string: '"NaturalScrolling" "true"'
     line: '    Option "NaturalScrolling" "true"'
@@ -116,6 +122,7 @@
     repo: https://github.com/sogaiu/tree-sitter-fennel.git
     dest: '{{ user_space_ts_fennel }}'
     version: master
+    update: no
   tags:
     - fennel
 

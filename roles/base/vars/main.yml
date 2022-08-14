@@ -5,6 +5,7 @@ packages:
   - blueman
   - bluez
   - bluez-utils
+  - cronie # cron impl
   - gufw  # gui for ufw
   - keybase
   - keybase-gui
@@ -14,6 +15,7 @@ packages:
   - unclutter # hid mouse when not in use
   - xbindkeys # bind keys to commands
   - xcape  # key mapping
+  - xclip # x11 clipboard cli
   - xsecurelock # secure lock screen for x11
   - xss-lock # hook into X11 screen saver extension
   # networking
@@ -41,6 +43,7 @@ packages:
   - lua-language-server
   - yaml-language-server
   - yamllint
+  - wakatime
   ## haskell
   - stack
   ## terminal
@@ -53,6 +56,7 @@ packages:
   - exa  # like ls but extra
   - fd  # like find but kinder
   - figlet  # make large banners out of ascii
+  - fzf
   - gfold # search and list git repos
   - kitty
   - lazygit
@@ -85,7 +89,7 @@ packages:
   - clojure
   - leiningen
   ## node dev
-  - nodejs
+  - nodejs-lts-gallium
   - npm
   ## go Dev
   - go
@@ -106,3 +110,4 @@ packages:
   - rofi-calc
   # security
   - pam-u2f
+  - bitwarden-cli

@@ -1,6 +1,7 @@
 ---
 packages:
   # general
+  - acpi  # client for power, batter, and thermal
   - base-devel
   - blueman
   - bluez
@@ -10,12 +11,14 @@ packages:
   - keybase
   - keybase-gui
   - pkgfile # determines which package repo a file belongs to, according to /etc/pacman.conf
+  - polkit-gnome-authentication-agent
   - sshguard
   - ufw # uncomplicated firewall
   - unclutter # hid mouse when not in use
   - xbindkeys # bind keys to commands
   - xcape  # key mapping
   - xclip # x11 clipboard cli
+  - xfce4-power-manager
   - xsecurelock # secure lock screen for x11
   - xss-lock # hook into X11 screen saver extension
   # networking

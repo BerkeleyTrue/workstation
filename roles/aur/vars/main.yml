@@ -2,6 +2,8 @@
 aur:
   # ui
   - otf-nerd-fonts-fira-code
+  - plymouth
+  - plymouth-theme-hexagon-alt-git
   # general
   - lua-format
   - handlr-bin  # mime utils written in rust 🎉

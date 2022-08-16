@@ -29,7 +29,6 @@ packages:
   - traceroute
   - wget
   # desktop
-  - cbatticon
   - dunst # notification daemon
   - flameshot
   - nitrogen

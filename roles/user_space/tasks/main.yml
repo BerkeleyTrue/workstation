@@ -80,21 +80,6 @@
     - init
     - taskwarrior-cron
 
-- name: Gather package facts
-  package_facts:
-
-- name: Disable lightdm
-  become: true
-  become_user: root
-  register: service_stop
-  service:
-    name: lightdm
-    enabled: false
-    state: stopped
-  tags:
-    - systemd
-  when: "'lightdm' in ansible_facts.packages"
-
 - name: Enable docker service
   become: true
   become_user: root

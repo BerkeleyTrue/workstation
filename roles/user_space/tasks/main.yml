@@ -105,18 +105,6 @@
   tags:
     - systemd
 
-- name: Ensure trackpad is set to natural scrolling
-  become: true
-  become_user: root
-  lineinfile:
-    create: true
-    dest: /etc/X11/xorg.conf.d/30-touchpad.conf
-    search_string: '"NaturalScrolling" "true"'
-    line: '    Option "NaturalScrolling" "true"'
-    state: present
-  tags:
-    - natural-scrolling
-
 - name: Ensure fennel treesitter is present
   git:
     repo: https://github.com/sogaiu/tree-sitter-fennel.git

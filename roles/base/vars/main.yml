@@ -1,5 +1,8 @@
 ---
 packages:
+  # x11
+  - xorg-server
+  - xorg-xinit # xorg startx
   # general
   - acpi  # client for power, batter, and thermal
   - base-devel
@@ -11,9 +14,8 @@ packages:
   - keybase
   - keybase-gui
   - pkgfile # determines which package repo a file belongs to, according to /etc/pacman.conf
-  - polkit-gnome-authentication-agent
   - sshguard
-  - tff-dejavu # required for plymouth hexagon theme
+  - ttf-dejavu # required for plymouth hexagon theme
   - ufw # uncomplicated firewall
   - unclutter # hid mouse when not in use
   - xbindkeys # bind keys to commands

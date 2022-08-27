@@ -119,3 +119,12 @@
     cmd: aspell -d en dump master | aspell -l en expand > {{ user_space_local_share }}/dict/english
   tags:
     - dict
+
+- name: Ensure Corpus wiki
+  git:
+    repo: https://github.com/BerkeleyTrue/corpus.git
+    dest: '{{ ansible_env.HOME }}/docs/corpus'
+    update: no
+    version: master
+  tags:
+    - corpus

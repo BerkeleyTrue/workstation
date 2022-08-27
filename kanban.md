@@ -2,11 +2,10 @@
 
 - build dictionary
 - add tmux plugin install
-- create run script
 
 ## Doing
 
-- install crypto-egg project in dvl
+- install crypto-egg-go project in dvl
 
 ## Done
 
@@ -24,3 +23,4 @@
 - remove yadm bootstrap
 - use ansible to install xmonad deps
 - clone and install haskell-language-server
+- create run script

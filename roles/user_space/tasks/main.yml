@@ -104,3 +104,12 @@
     repo: https://github.com/haskell/haskell-language-server.git
     dest: '{{ user_space_hls }}'
     version: 1.7.0.0
+
+- name: Ensure crypto-egg-go
+  git:
+    repo: https://github.com/berkeleytrue/crypto-egg-go.git
+    dest: '{{ user_space_crypto_egg_go }}'
+    version: main
+    update: no
+  tags:
+    - crypto-egg

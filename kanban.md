@@ -1,11 +1,11 @@
 ## To Do
 
-- build dictionary
 - add tmux plugin install
+- add neovim packages
 
 ## Doing
 
-- install crypto-egg-go project in dvl
+- build dictionary
 
 ## Done
 
@@ -24,3 +24,4 @@
 - use ansible to install xmonad deps
 - clone and install haskell-language-server
 - create run script
+- install crypto-egg-go project in dvl

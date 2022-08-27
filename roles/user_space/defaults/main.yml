@@ -1,4 +1,5 @@
 ---
+user_space_local_share: '{{ ansible_env.HOME }}/.local/share'
 user_space_dvl_dir: '{{ ansible_env.HOME }}/dvlpmnt'
 user_space_ts_fennel: '{{ user_space_dvl_dir }}/lisp/fennel/tree-sitter-fennel'
 user_space_hls: '{{ user_space_dvl_dir }}/haskell/hls'
@@ -9,11 +10,12 @@ user_space_dirs:
   - '{{ ansible_env.HOME }}/docs'
   - '{{ ansible_env.HOME }}/dsk'
   - '{{ ansible_env.HOME }}/docs/notes/captainslog/'  # captains log command in shell/task.sh
-  - '{{ ansible_env.HOME }}/.local/share/x11'  # x11 logging set up in zprofile
-  - '{{ ansible_env.HOME }}/.local/share/task'  # task logs
-  - '{{ ansible_env.HOME }}/.local/share/xmonad'  # xmonad shared bin dir and logs
+  - '{{ user_space_local_share }}/x11'  # x11 logging set up in zprofile
+  - '{{ user_space_local_share }}/task'  # task logs
+  - '{{ user_space_local_share }}/xmonad'  # xmonad shared bin dir and logs
+  - '{{ user_space_local_share }}/dict' # a place to put dictionairies
 
 user_space_files:
-  - '{{ ansible_env.HOME }}/.local/share/x11/x11.log'  # x11 logging set up in zprofile
-  - '{{ ansible_env.HOME }}/.local/share/task/on-exit-sync-hook.log'  # task logs
-  - '{{ ansible_env.HOME }}/.local/share/task/cron-update.log'  # task logs
+  - '{{ user_space_local_share }}/x11/x11.log'  # x11 logging set up in zprofile
+  - '{{ user_space_local_share }}/task/on-exit-sync-hook.log'  # task logs
+  - '{{ user_space_local_share }}/task/cron-update.log'  # task logs

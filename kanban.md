@@ -5,7 +5,6 @@
 
 ## Doing
 
-- build dictionary
 
 ## Done
 
@@ -25,3 +24,4 @@
 - clone and install haskell-language-server
 - create run script
 - install crypto-egg-go project in dvl
+- build dictionary

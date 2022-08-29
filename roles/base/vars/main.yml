@@ -1,5 +1,8 @@
 ---
 packages:
+  # base
+  - man-db
+  - man-pages
   # x11
   - xorg-server
   - xorg-xinit # xorg startx

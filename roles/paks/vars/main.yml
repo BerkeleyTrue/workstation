@@ -5,7 +5,6 @@ paks:
   - name: com.discordapp.Discord
   - name: com.slack.Slack
   - name: org.freecadweb.FreeCAD
-  - name: us.zoom.Zoom
   - name: com.github.libresprite.LibreSprite
   - name: com.github.wwmm.pulseeffects
   - name: io.dbeaver.DBeaverCommunity

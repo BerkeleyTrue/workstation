@@ -35,6 +35,7 @@ packages:
   - wget
   # desktop
   - dunst # notification daemon
+  - papirus-icon-theme # needed for dunst icons
   - flameshot
   - nitrogen
   - pasystray # pulse audio systray

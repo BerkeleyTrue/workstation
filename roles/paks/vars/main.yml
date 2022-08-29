@@ -1,15 +1,17 @@
 ---
 paks:
-  - name: org.libreoffice.LibreOffice
-  - name: org.glimpse_editor.Glimpse
   - name: com.discordapp.Discord
-  - name: com.slack.Slack
-  - name: org.freecadweb.FreeCAD
   - name: com.github.libresprite.LibreSprite
+  - name: com.github.tchx84.Flatseal # manage flatpak permissions
   - name: com.github.wwmm.pulseeffects
-  - name: io.dbeaver.DBeaverCommunity
-  - name: org.chromium.Chromium
+  - name: com.slack.Slack
   - name: com.vscodium.codium
-  - name: org.mozilla.firefox
+  - name: io.dbeaver.DBeaverCommunity
   - name: io.github.f3d_app.f3d # stl viewer
+  - name: org.chromium.Chromium
+  - name: org.freecadweb.FreeCAD
   - name: org.freedesktop.Platform.ffmpeg-full/x86_64/21.08 # required for smooth video playback in firefox
+  - name: org.gimp.GIMP # Glimpse is dead
+  - name: org.inkscape.Inkscape # vector graphics editor
+  - name: org.libreoffice.LibreOffice
+  - name: org.mozilla.firefox

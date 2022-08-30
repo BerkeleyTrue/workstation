@@ -10,14 +10,6 @@
     - folders
     - init
 
-- name: Ensure user dir updates is masked
-  systemd:
-    name: xdg-user-dirs-update.service
-    masked: true
-    enabled: false
-    scope: user
-    state: stopped
-
 - name: Ensure user log files
   copy:
     content: ''
@@ -80,16 +72,6 @@
     - init
     - taskwarrior-cron
 
-- name: Enable docker service
-  become: true
-  become_user: root
-  systemd:
-    name: docker
-    enabled: true
-    state: started
-  tags:
-    - systemd
-
 - name: Ensure fennel treesitter is present
   git:
     repo: https://github.com/sogaiu/tree-sitter-fennel.git
@@ -128,3 +110,6 @@
     version: master
   tags:
     - corpus
+
+
+- ansible.builtin.import_tasks: services.yml

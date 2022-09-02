@@ -111,5 +111,12 @@
   tags:
     - corpus
 
+- name: Ensure emoji terminal support
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    src: /usr/share/fontconfig/conf.avail/75-twemoji.conf
+    dest: /etc/fonts/conf.d/75-twemoji.conf
+    state: link
 
 - ansible.builtin.import_tasks: services.yml

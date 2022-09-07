@@ -120,6 +120,7 @@ packages:
   - aspell-en
   - rofi
   - rofi-calc
+  - gparted
   # security
   - pam-u2f
   - bitwarden-cli

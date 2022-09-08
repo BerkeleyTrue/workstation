@@ -16,6 +16,7 @@ aur:
   - getoptions # better options parser for posix
   - navi  # interactive CL tool for cheats (sorta like TLDR)
   - toilet  # asci out text
+  - vimv # batch rename files w/ vim
   # automation
   - terraform-lsp-git
   # clojure dev

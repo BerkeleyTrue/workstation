@@ -1,5 +1,7 @@
 ---
 aur:
+  # apps
+  - zathura # pdf reading
   # ui
   - otf-nerd-fonts-fira-code
   - ttf-twemoji # required for emoji's in terminals

@@ -13,6 +13,8 @@ packages:
   - bluez
   - bluez-utils
   - cronie # cron impl
+  - cups # printing services
+  - nss-mdns # host name resolution for cups networking
   - gufw  # gui for ufw
   - keybase
   - keybase-gui

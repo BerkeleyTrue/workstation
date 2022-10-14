@@ -6,6 +6,6 @@
     - check_pass
     - base
     - aur
-    - pip
-    - npm
     - paks
+    - npm
+    - pip

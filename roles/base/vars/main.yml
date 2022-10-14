@@ -71,6 +71,7 @@ packages:
   - fd  # like find but kinder
   - figlet  # make large banners out of ascii
   - fzf
+  - glow # cli markdown renderer
   - gfold # search and list git repos
   - kitty
   - lazygit

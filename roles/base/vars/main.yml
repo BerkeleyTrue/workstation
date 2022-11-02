@@ -22,6 +22,7 @@ packages:
   - sshguard
   - ttf-dejavu # required for plymouth hexagon theme
   - ttf-fira-code # required for progress ligatures in kitty conf
+  - otf-ipafont # required to render japanese fonts
   - ufw # uncomplicated firewall
   - unclutter # hid mouse when not in use
   - xbindkeys # bind keys to commands

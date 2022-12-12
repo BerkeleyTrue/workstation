@@ -14,15 +14,17 @@ packages:
   - bluez-utils
   - cronie # cron impl
   - cups # printing services
-  - nss-mdns # host name resolution for cups networking
   - gufw  # gui for ufw
+  - gvfs # virtual file system implementation for GIO
   - keybase
   - keybase-gui
+  - nss-mdns # host name resolution for cups networking
+  - otf-ipafont # required to render japanese fonts
   - pkgfile # determines which package repo a file belongs to, according to /etc/pacman.conf
   - sshguard
   - ttf-dejavu # required for plymouth hexagon theme
   - ttf-fira-code # required for progress ligatures in kitty conf
-  - otf-ipafont # required to render japanese fonts
+  - udisks2 # disk management service
   - ufw # uncomplicated firewall
   - unclutter # hid mouse when not in use
   - xbindkeys # bind keys to commands

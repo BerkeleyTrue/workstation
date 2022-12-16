@@ -67,7 +67,7 @@
   ansible.builtin.cron:
     name: Sync taskwarrior
     minute: 0 # runs on evey 0 minute (hourly)
-    job: /home/berkeleytrue/.config/task/hooks/cron-update.sh
+    job: /home/berkeleytrue/.config/task/scripts/cron-update.sh
   tags:
     - init
     - taskwarrior-cron

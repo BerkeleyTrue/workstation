@@ -22,3 +22,11 @@
     name: avahi-daemon
     enabled: true
     state: started
+
+- name: Ensure cronie is running
+  become: true
+  become_user: root
+  anisible.builtin.systemd:
+    name: cronie
+    enabled: true
+    state: started

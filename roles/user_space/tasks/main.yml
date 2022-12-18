@@ -1,22 +1,22 @@
 ---
 - name: Ensure user dirs
   ansible.builtin.file:
-    path: '{{ item }}'
+    path: "{{ item }}"
     state: directory
     mode: 0755
-  loop: '{{ user_space_dirs }}'
+  loop: "{{ user_space_dirs }}"
   tags:
     - user
     - folders
     - init
 
 - name: Ensure user log files
-  copy:
-    content: ''
-    dest: '{{ item }}'
+  ansible.builtin.copy:
+    content: ""
+    dest: "{{ item }}"
     force: false
-    mode: 0644 # owner read/write, group read, world read
-  loop: '{{ user_space_files }}'
+    mode: "0644" # owner read/write, group read, world read
+  loop: "{{ user_space_files }}"
 
   tags:
     - user
@@ -26,7 +26,7 @@
 - name: Make zsh default shell
   become: true
   become_user: root
-  user:
+  ansible.builtin.user:
     name: berkeleytrue
     shell: /usr/bin/zsh
   tags:
@@ -37,7 +37,7 @@
 - name: Make pacman colored output
   become: true
   become_user: root
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/pacman.conf
     state: present
     regexp: ^(.*)Color
@@ -55,7 +55,7 @@
     dest: /etc/zsh/zshenv
     backup: true
     owner: root
-    mode: '0644'
+    mode: "0644"
   tags:
     - init
     - resources
@@ -73,40 +73,42 @@
     - taskwarrior-cron
 
 - name: Ensure fennel treesitter is present
-  git:
+  ansible.builtin.git:
     repo: https://github.com/sogaiu/tree-sitter-fennel.git
-    dest: '{{ user_space_ts_fennel }}'
+    dest: "{{ user_space_ts_fennel }}"
     version: master
-    update: no
+    update: false
   tags:
     - fennel
 
 - name: Ensure hls repo
-  git:
+  ansible.builtin.git:
     repo: https://github.com/haskell/haskell-language-server.git
-    dest: '{{ user_space_hls }}'
+    dest: "{{ user_space_hls }}"
     version: 1.7.0.0
 
 - name: Ensure crypto-egg-go
-  git:
+  ansible.builtin.git:
     repo: https://github.com/berkeleytrue/crypto-egg-go.git
-    dest: '{{ user_space_crypto_egg_go }}'
+    dest: "{{ user_space_crypto_egg_go }}"
     version: main
-    update: no
+    update: false
   tags:
     - crypto-egg
 
 - name: Ensure english dictionairy
   ansible.builtin.shell:
     cmd: aspell -d en dump master | aspell -l en expand > {{ user_space_local_share }}/dict/english
+  register: dict_output
+  changed_when: dict_output.rc != 0
   tags:
     - dict
 
 - name: Ensure Corpus wiki
-  git:
+  ansible.builtin.git:
     repo: https://github.com/BerkeleyTrue/corpus.git
-    dest: '{{ ansible_env.HOME }}/docs/corpus'
-    update: no
+    dest: "{{ ansible_env.HOME }}/docs/corpus"
+    update: false
     version: master
   tags:
     - corpus
@@ -119,4 +121,5 @@
     dest: /etc/fonts/conf.d/75-twemoji.conf
     state: link
 
-- ansible.builtin.import_tasks: services.yml
+- name: Import services
+  ansible.builtin.import_tasks: services.yml

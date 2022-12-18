@@ -1,6 +1,6 @@
 ---
 - name: Ensure user dir updates is masked
-  systemd:
+  anisible.builtin.systemd:
     name: xdg-user-dirs-update.service
     masked: true
     enabled: false
@@ -10,7 +10,7 @@
 - name: Enable docker service
   become: true
   become_user: root
-  systemd:
+  anisible.builtin.systemd:
     name: docker
     enabled: true
     state: started
@@ -18,7 +18,7 @@
 - name: Ensure Avahi is running
   become: true
   become_user: root
-  systemd:
+  anisible.builtin.systemd:
     name: avahi-daemon
     enabled: true
     state: started

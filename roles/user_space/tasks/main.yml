@@ -123,3 +123,14 @@
 
 - name: Import services
   ansible.builtin.import_tasks: services.yml
+
+- name: Ensure pulse audio auto connect
+  become: true
+  become_user: root
+  ansible.builtin.lineinfile:
+    create: true
+    line: load-module module-switch-on-connect
+    dest: /etc/pulse/default.pa
+    mode: "0644"
+  tags:
+    - pulseaudio

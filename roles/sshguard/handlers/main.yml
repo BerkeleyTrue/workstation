@@ -2,7 +2,7 @@
 - name: Restart sshguard
   become: true
   become_user: root
-  service:
+  ansible.builtin.service:
     name: sshguard
     state: restarted
   listen: restart sshguard
@@ -10,6 +10,6 @@
 - name: Reload ufw
   become: true
   become_user: root
-  ufw:
+  community.general.ufw:
     state: reloaded
   listen: reload ufw

@@ -2,7 +2,7 @@
 - name: Install global npm packages
   become: true
   become_user: root
-  npm:
+  community.general.npm:
     global: true
     production: true
     name: '{{ item }}'
@@ -15,7 +15,7 @@
 - name: Update global npm packages # noqa package-latest
   become: true
   become_user: root
-  npm:
+  community.general.npm:
     global: true
     production: true
     name: '{{ item }}'

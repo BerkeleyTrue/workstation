@@ -5,7 +5,7 @@
     - nvim-bootstrap
   block:
     - name: Ensure Nvim packer dirs
-      file:
+      ansible.builtin.file:
         path: '{{ item }}'
         state: directory
         mode: 0755
@@ -19,18 +19,18 @@
     - name: Check for git package
       become: true
       become_user: root
-      pacman:
+      community.general.pacman:
         name: git
         state: present
 
     - name: Clone packer.nvim repo
-      git:
+      ansible.builtin.git:
         repo: https://github.com/wbthomason/packer.nvim
         dest: '{{ nvim_packer_nvim_dir }}'
         version: master
 
     - name: Clone aniseed repo
-      git:
+      ansible.builtin.git:
         repo: https://github.com/Olical/aniseed.git
         dest: '{{ nvim_aniseed_dir }}'
         version: master

@@ -2,7 +2,7 @@
 - name: Restart ssh
   become: true
   become_user: root
-  service:
+  ansible.builtin.service:
     name: sshd
     state: '{{ item }}'
   when: sshd_status.rc == 0

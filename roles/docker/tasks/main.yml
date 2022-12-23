@@ -1,16 +1,16 @@
 ---
 - name: Ensure docker is installed
-  pacman:
+  community.general.pacman:
     name: docker
     state: present
 
 - name: Ensure docker group exits
-  group:
+  ansible.builtin.group:
     name: docker
     system: true
 
 - name: Ensure my user is in docker group
-  user:
+  ansible.builtin.user:
     groups:
       - docker
     name: '{{ user }}'

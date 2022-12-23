@@ -1,5 +1,5 @@
 ---
-- name: fail2ban
+- name: Fail2ban
   tags:
     - fail2ban
     - user
@@ -8,14 +8,14 @@
     - name: Install
       become: true
       become_user: root
-      package:
+      ansible.builtin.package:
         name: fail2ban
         state: present
 
     - name: Make slack notification action
       become: true
       become_user: root
-      template:
+      ansible.builtin.template:
         src: slack-notify.conf
         dest: /etc/fail2ban/action.d/slack-notify.conf
         mode: 0644
@@ -25,7 +25,7 @@
     - name: Apply jail.local
       become: true
       become_user: root
-      copy:
+      ansible.builtin.copy:
         src: jail.local
         dest: /etc/fail2ban/jail.local
         mode: 0644
@@ -35,6 +35,6 @@
     - name: Enable fail2ban
       become: true
       become_user: root
-      systemd:
+      ansible.builtin.systemd:
         name: fail2ban
         enabled: true

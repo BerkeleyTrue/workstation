@@ -1,16 +1,16 @@
 ---
 - name: Ensure traefik folders exits
-  file:
-    path: '{{ item }}'
+  ansible.builtin.file:
+    path: "{{ item }}"
     state: directory
     mode: 0755
   loop:
-    - '{{ traefik_folder }}'
+    - "{{ traefik_folder }}"
 
 - name: Ensure log folder exits
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     path: /var/log/traefik
     mode: 0755
     state: directory
@@ -19,8 +19,8 @@
 - name: Ensure log files exits
   become: true
   become_user: root
-  copy:
-    content: ''
+  ansible.builtin.copy:
+    content: ""
     dest: /var/log/traefik/{{ item }}
     mode: 0644
     force: false
@@ -29,32 +29,32 @@
     - traefik.log
 
 - name: Copy config file
-  template:
+  ansible.builtin.template:
     src: traefik/config.yml
-    dest: '{{ traefik_folder }}/config.yml'
+    dest: "{{ traefik_folder }}/config.yml"
     mode: 0644
   notify:
     - Restart traefik
 
 - name: Copy traefik file
-  template:
+  ansible.builtin.template:
     src: traefik/traefik.yml
-    dest: '{{ traefik_folder }}/traefik.yml'
+    dest: "{{ traefik_folder }}/traefik.yml"
     mode: 0644
   notify:
     - Restart traefik
 
 - name: Ensure docker compose file exits
-  template:
+  ansible.builtin.template:
     src: traefik/docker-compose.yml
-    dest: '{{ traefik_folder}}/docker-compose.yml'
+    dest: "{{ traefik_folder }}/docker-compose.yml"
     mode: 0644
 
 - name: Ensure docker network
-  docker_network:
+  commmunity.docker.docker_network:
     name: web
 
 - name: Ensure traefik is up
-  docker_compose:
+  commmunity.docker.docker_compose:
     project_name: traefik
-    project_src: '{{ traefik_folder }}'
+    project_src: "{{ traefik_folder }}"

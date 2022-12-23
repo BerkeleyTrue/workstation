@@ -1,6 +1,6 @@
 ---
 - name: Update paks
-  command: flatpak update --noninteractive
+  ansible.builtin.command: flatpak update --noninteractive
   changed_when: true
   tags:
     - update
@@ -10,7 +10,7 @@
 - name: Install paks
   become: true
   become_user: root
-  flatpak:
+  community.general.flatpak:
     name: "{{ item.name }}"
     remote: "{{ item.remote | default('flathub') }}"
     state: present

@@ -5,18 +5,18 @@
     - sshguard
   block:
     - name: Install sshguard package
-      package:
+      ansible.builtin.package:
         name: sshguard
         state: present
 
     - name: Register sshd port setting in ssd_config
-      shell: grep -E '^Port ' /etc/ssh/sshd_config || echo 'Port 22'
+      ansible.builtin.shell: grep -E '^Port ' /etc/ssh/sshd_config || echo 'Port 22'
       register: sshguard_ssh_port_tmp
       changed_when: false
       failed_when: false
 
     - name: Register sshd port fact
-      set_fact:
+      ansible.builtin.set_fact:
         sshguard_ssh_port: '{{ sshguard_ssh_port_tmp.stdout.split()[1] | trim }}'
       tags:
         - sshguard
@@ -24,7 +24,7 @@
     - name: Add WHITELIST option to sshguard.conf
       become: true
       become_user: root
-      lineinfile:
+      ansible.builtin.lineinfile:
         dest: /etc/sshguard.conf
         regexp: ^WHITELIST_FILE=
         line: WHITELIST_FILE={{ sshguard_whitelist_file }}
@@ -35,7 +35,7 @@
     - name: Ensure sshguard whitelist directory
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ sshguard_whitelist_directory }}'
         state: directory
         mode: '0755'
@@ -45,7 +45,7 @@
     - name: Copy sshguard.service file
       become: true
       become_user: root
-      copy:
+      ansible.builtin.copy:
         src: sshguard.archlinux.service
         dest: /etc/systemd/system/sshguard.service
         mode: '0644'
@@ -55,7 +55,7 @@
     - name: Update UFW before.rules
       become: true
       become_user: root
-      blockinfile:
+      ansible.builtin.blockinfile:
         path: /etc/ufw/before.rules
         marker: '# {mark} ANSIBLE MANAGED BLOCK'
         insertafter: ^-A ufw-before-output -o lo -j ACCEPT
@@ -69,7 +69,7 @@
     - name: Update sshguard whitelist file
       become: true
       become_user: root
-      lineinfile:
+      ansible.builtin.lineinfile:
         dest: '{{ sshguard_whitelist_file }}'
         regexp: ^{{ whitelist_entry }}
         line: '{{ whitelist_entry }}'

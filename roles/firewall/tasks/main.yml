@@ -1,12 +1,12 @@
 ---
-- name: firewall
+- name: Firewall
   tags:
     - firewall
   block:
     - name: Install ufw
       become: true
       become_user: root
-      package:
+      ansible.builtin.package:
         name: ufw
         state: present
 

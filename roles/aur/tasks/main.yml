@@ -5,7 +5,7 @@
     - packages
   block:
     - name: Include `aur_builder` main
-      include_role:
+      ansible.builtin.include_role:
         name: aur_builder
         tasks_from: main
         apply:
@@ -36,7 +36,7 @@
 
   always:
     - name: Include `aur_builder` cleanup
-      include_role:
+      ansible.builtin.include_role:
         name: aur_builder
         tasks_from: cleanup
         apply:

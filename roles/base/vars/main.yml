@@ -64,6 +64,7 @@ packages:
   ## haskell
   - stack
   ## terminal
+  - 7zip
   - alacritty
   - aws-cli # needed for work
   - bat  # like cat but rusty

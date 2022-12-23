@@ -8,4 +8,3 @@ python -m pip install --user ansible
 
 echo -e "\n\n*** Installing collections ***\n\n"
 ansible-galaxy install -r requirements.yml
-

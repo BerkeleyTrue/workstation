@@ -1,0 +1,38 @@
+#!/bin/bash
+APLAY=ansible-playbook
+ARGS='--ask-become --inventory hosts.ini'
+TAGS=''
+
+# create a map of the playbook names to the playbook files
+
+declare -A PLAYBOOKS
+
+PLAYBOOKS[main]='main_playbook.yml'
+PLAYBOOKS[container]='container_playbook.yml'
+PLAYBOOKS[user_packages]='user_packages_playbook.yml'
+PLAYBOOKS[update]='update_playbook.yml'
+
+PLAYBOOKS_IDX=(update main container user_packages)
+
+declare -A PLAYBOOK_TAGS
+
+PLAYBOOK_TAGS[update]='update'
+
+echo 'choose a playbook'
+
+# use gum to have the user choose a playbook based on the keys in the map
+playbook_key=$(gum choose "${PLAYBOOKS_IDX[@]}")
+
+# get the playbook file name from the map
+playbook=${PLAYBOOKS[$playbook_key]}
+
+# create a tags argument if playbook has tags
+if [ -n "${PLAYBOOK_TAGS[$playbook_key]}" ]; then
+  TAGS="--tags ${PLAYBOOK_TAGS[$playbook_key]}"
+fi
+
+echo "Running '$APLAY $playbook $ARGS $TAGS'"
+
+if [[ -n $playbook ]]; then
+  $APLAY $playbook $ARGS $TAGS
+fi

@@ -1,11 +1,21 @@
 ---
-- name: Update pip packages # noqa package-latest
-  ansible.builtin.pip:
-    name: '{{ pips }}'
-    state: latest
+- name: Get outdated packages
+  ansible.builtin.shell:
+    cmd: pip3 list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1
+  register: pip_outdated
+  changed_when: "pip_outdated.stdout is not empty"
+
   tags:
     - python
     - update
+
+- name: Update outdated packages # noqa package-latest
+  ansible.builtin.pip:
+    name: '{{ package }}'
+    state: latest
+  when: "pip_outdate.stdout"
+  with_items:
+    - "{{ pip_outdate.stdout_lines }}"
 
 - name: Install pip packages
   ansible.builtin.pip:

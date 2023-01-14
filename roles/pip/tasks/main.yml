@@ -3,19 +3,30 @@
   ansible.builtin.shell:
     cmd: pip3 list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1
   register: pip_outdated
-  changed_when: "pip_outdated.stdout is not empty"
+  changed_when: pip_outdated.stdout | length > 0
 
   tags:
-    - python
+    - python-update
     - update
+
+- name: Output packages
+  ansible.builtin.debug:
+    msg: "Outdated packages: {{ pip_outdated.stdout_lines }}"
+  tags:
+    - python-update
+
 
 - name: Update outdated packages # noqa package-latest
   ansible.builtin.pip:
-    name: '{{ package }}'
+    name: '{{ item }}'
     state: latest
-  when: "pip_outdate.stdout"
+  when: pip_outdated.stdout
   with_items:
-    - "{{ pip_outdate.stdout_lines }}"
+    - "{{ pip_outdated.stdout_lines }}"
+
+  tags:
+    - python-update
+    - update
 
 - name: Install pip packages
   ansible.builtin.pip:

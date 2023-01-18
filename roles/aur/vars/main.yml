@@ -7,6 +7,7 @@ aur:
   - ttf-twemoji # required for emoji's in terminals
   - plymouth-git # plymouth stable is often stale and unbuildable. Use git version instead
   - plymouth-theme-hexagon-alt-git
+  - trayer-srg-git # x11 systray
   # general
   - lua-format
   - handlr-bin  # mime utils written in rust 🎉

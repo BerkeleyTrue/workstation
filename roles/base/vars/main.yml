@@ -6,6 +6,7 @@ packages:
   # x11
   - xorg-server
   - xorg-xinit # xorg startx
+  - gobject-introspection # needed by taffybar
   # general
   - acpi  # client for power, batter, and thermal
   - base-devel

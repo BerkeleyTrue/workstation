@@ -30,3 +30,9 @@
     name: cronie
     enabled: true
     state: started
+
+- name: Ensure UI services are enabled
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    enabled: true
+  loop: "{{ user_space_ui_services }}"

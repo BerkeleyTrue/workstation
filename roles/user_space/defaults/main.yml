@@ -19,3 +19,21 @@ user_space_files:
   - '{{ user_space_local_share }}/x11/x11.log'  # x11 logging set up in zprofile
   - '{{ user_space_local_share }}/task/on-exit-sync-hook.log'  # task logs
   - '{{ user_space_local_share }}/task/cron-update.log'  # task logs
+
+user_space_ui_services: # these are tracked by yadm
+  # tray group, binds to graphical-session-pre systray apps, this
+  # there is a xmonad.target that is started by xmonad, this binds to
+  # graphical-session and tray, and requires graphical-session-pre
+  # this kicks off starting all these services
+  - tray.target
+  - blueman-applet.service
+  - dunst.service
+  - flameshot.service
+  - network-manager-applet.service
+  - pasystray.service
+  - picom.service
+  - status-notifier-watcher.service
+  - taffybar.service
+  - unclutter.service
+  - xcape.service
+  - xkbmap.service

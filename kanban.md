@@ -2,6 +2,7 @@
 
 - add tmux plugin install
 - add neovim packages
+- add nix daemon enable
 
 ## Doing
 

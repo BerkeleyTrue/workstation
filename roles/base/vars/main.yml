@@ -6,13 +6,13 @@ packages:
   # x11
   - xorg-server
   - xorg-xinit # xorg startx
-  - gobject-introspection # needed by taffybar
+  - gobject-introspection # needed by taffybar, gtk stuff
   # general
   - acpi  # client for power, batter, and thermal
-  - base-devel
-  - blueman
-  - bluez
-  - bluez-utils
+  - base-devel # base development tools
+  - blueman # A GTK+ Bluetooth Manager
+  - bluez # bluetooth daemons
+  - bluez-utils # utils for bluetooh
   - cronie # cron impl
   - cups # printing services
   - gufw  # gui for ufw
@@ -20,9 +20,10 @@ packages:
   - keybase
   - keybase-gui
   - nss-mdns # host name resolution for cups networking
+  - nix # package manager
   - otf-ipafont # required to render japanese fonts
   - pkgfile # determines which package repo a file belongs to, according to /etc/pacman.conf
-  - sshguard
+  - sshguard # protects ssh host from brute force attacks
   - ttf-dejavu # required for plymouth hexagon theme
   - ttf-fira-code # required for progress ligatures in kitty conf
   - udisks2 # disk management service
@@ -43,29 +44,26 @@ packages:
   # desktop
   - dunst # notification daemon
   - papirus-icon-theme # needed for dunst icons
-  - flameshot
-  - nitrogen
+  - flameshot # screenshot util
+  - nitrogen # wallpaper manager
   - pasystray # pulse audio systray
   - picom # compositor
   - pipewire # audio
   - pipewire-alsa # alsa compat with pipewire, uninstalls alsa
   - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio
   - plasma-desktop # for games
-  - volumeicon
-  - wireplumber
+  - wireplumber # audio
   # dev
-  - git
-  - github-cli
-  - hub
+  - git # version control
+  - github-cli # cli for github
+  - hub # github cli also?
   - lua-language-server
   - yaml-language-server
   - yamllint
-  - wakatime
-  ## haskell
-  - stack
+  - wakatime # track editor time
   ## terminal
-  - 7zip
-  - alacritty
+  - 7zip # archive utils
+  - alacritty # rusty terminal w/o ligaments, here as a backup
   - aws-cli # needed for work
   - bat  # like cat but rusty
   - bat-extras # bat extras including batman man pager
@@ -75,35 +73,33 @@ packages:
   - exa  # like ls but extra
   - fd  # like find but kinder
   - figlet  # make large banners out of ascii
-  - fzf
+  - fzf # display and filter lists in a TUI
   - glow # cli markdown renderer
   - gfold # search and list git repos
-  - kitty
-  - lazygit
+  - kitty # rusty terminal
+  - lazygit # git tui
   - lsof # list open files running
-  - neovim
+  - neovim # better vim
   - playerctl # pause/play music players ci
   - procs  # rusty processes
   - ripgrep
-  - shfmt
+  - shfmt # shell formatter
   - task  # taskwarrior
   - tealdeer  # TL;DR for deers (rusty)
-  - the_silver_searcher
+  - the_silver_searcher # ag: search file contents
   - thefuck # corrects errors in previous console commands
   - timew  # timewarrior
-  - tmux
+  - tmux # terminal multiplexer
   - yad # CLI to show diaglogs
   - yadm  # yet another dotfiles manager
   - zoxide  # like cd but with more warp
-  - zsh
+  - zsh # zsh shell
   ## automation
   - ansible
   - ansible-lint
   - docker
   - docker-compose
-  - packer
-  - terraform
-  - vault
+  - vault # ansible vault for managing secrets
   ## clojure dev
   - clojure
   - leiningen

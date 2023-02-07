@@ -93,3 +93,13 @@
         - systemd
         - resources
         - files
+
+    - name: Ensure nix daemon is running
+      become: true
+      become_user: root
+      ansible.builtin.systemd:
+        name: nix-daemon
+        enabled: true
+        state: started
+      tags:
+        - systemd-base

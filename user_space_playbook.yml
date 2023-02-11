@@ -1,0 +1,7 @@
+---
+
+- name: Run userspace role
+  hosts: localhost
+
+  roles:
+    - user_space

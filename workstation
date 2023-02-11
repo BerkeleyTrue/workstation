@@ -11,8 +11,9 @@ PLAYBOOKS[main]='main_playbook.yml'
 PLAYBOOKS[container]='container_playbook.yml'
 PLAYBOOKS[user_packages]='user_packages_playbook.yml'
 PLAYBOOKS[update]='update_playbook.yml'
+PLAYBOOKS[user_space]='user_space_playbook.yml'
 
-PLAYBOOKS_IDX=(update main container user_packages)
+PLAYBOOKS_IDX=(update main container user_packages, user_space)
 
 declare -A PLAYBOOK_TAGS
 

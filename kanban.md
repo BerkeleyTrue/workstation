@@ -2,7 +2,6 @@
 
 - add tmux plugin install
 - add neovim packages
-- add nix daemon enable
 
 ## Doing
 
@@ -26,3 +25,4 @@
 - create run script
 - install crypto-egg-go project in dvl
 - build dictionary
+- add nix daemon enable

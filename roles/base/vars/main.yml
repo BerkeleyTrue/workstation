@@ -123,6 +123,7 @@ packages:
   - gparted
   - rofi # launcher
   - rofi-calc # adds calculator to rofi
+  - viewnior # fast image preview
   - zathura # pdf reading
   - zathura-cb # adds comic book support
   - zathura-pdf-mupdf # pdf server

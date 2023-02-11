@@ -11,6 +11,7 @@
         apply:
           tags:
             - update
+            - user-packages
       tags:
         - update
         - install-aur-packages

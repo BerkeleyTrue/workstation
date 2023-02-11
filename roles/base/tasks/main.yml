@@ -43,6 +43,7 @@
         - arch
         - packages
         - pacman
+        - user-packages
 
     - name: Ensure files are absent
       become: true

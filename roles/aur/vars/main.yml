@@ -3,7 +3,6 @@ aur:
   # apps
   - zathura # pdf reading
   # ui
-  - otf-nerd-fonts-fira-code # fira code font w/ nerd patches
   - ttf-twemoji # required for emoji's in terminals
   - plymouth-git # plymouth stable is often stale and unbuildable. Use git version instead
   - plymouth-theme-hexagon-alt-git

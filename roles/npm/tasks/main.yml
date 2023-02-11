@@ -11,6 +11,7 @@
   tags:
     - npm
     - packages
+    - user-packages
 
 - name: Update global npm packages # noqa package-latest
   become: true

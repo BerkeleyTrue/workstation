@@ -26,6 +26,7 @@ packages:
   - sshguard # protects ssh host from brute force attacks
   - ttf-dejavu # required for plymouth hexagon theme
   - ttf-fira-code # required for progress ligatures in kitty conf
+  - ttf-firacode-nerd # patches nerd fonts
   - udisks2 # disk management service
   - ufw # uncomplicated firewall
   - unclutter # hid mouse when not in use
@@ -62,7 +63,7 @@ packages:
   - yamllint
   - wakatime # track editor time
   ## terminal
-  - 7zip # archive utils
+  - p7zip # archive utils
   - alacritty # rusty terminal w/o ligaments, here as a backup
   - aws-cli # needed for work
   - bat  # like cat but rusty
@@ -113,7 +114,6 @@ packages:
   ## python
   - python-pip
   - python-setuptools
-  - python2-setuptools
   ## Ethereum
   - solidity
   ## packages

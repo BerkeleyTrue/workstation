@@ -4,7 +4,8 @@
   hosts: localhost
 
   roles:
+    - base
+    - aur
+    - paks
     - npm
     - pip
-    - paks
-    - user_space

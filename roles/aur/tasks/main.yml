@@ -14,6 +14,7 @@
       tags:
         - update
         - install-aur-packages
+        - user-packages
 
     - name: Update aur
       become: true
@@ -33,6 +34,7 @@
         aur_only: true
       tags:
         - install-aur-packages
+        - user-packages
 
   always:
     - name: Include `aur_builder` cleanup

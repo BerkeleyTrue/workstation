@@ -17,6 +17,7 @@ PLAYBOOKS_IDX=(update main container user_packages)
 declare -A PLAYBOOK_TAGS
 
 PLAYBOOK_TAGS[update]='update'
+PLAYBOOK_TAGS[user_packages]='user-packages'
 
 echo 'choose a playbook'
 

@@ -25,7 +25,6 @@ user_space_ui_services: # these are tracked by yadm
   # there is a xmonad.target that is started by xmonad, this binds to
   # graphical-session and tray, and requires graphical-session-pre
   # this kicks off starting all these services
-  - tray.target
   - blueman-applet.service
   - dunst.service
   - flameshot.service
@@ -34,6 +33,9 @@ user_space_ui_services: # these are tracked by yadm
   - picom.service
   - status-notifier-watcher.service
   - taffybar.service
+  - tmux.service
+  - tray.target
   - unclutter.service
   - xcape.service
   - xkbmap.service
+  - xplugd.service

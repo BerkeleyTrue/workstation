@@ -35,4 +35,5 @@
   ansible.builtin.systemd:
     name: "{{ item }}"
     enabled: true
+    scope: user
   loop: "{{ user_space_ui_services }}"

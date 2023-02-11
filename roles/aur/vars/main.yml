@@ -1,7 +1,5 @@
 ---
 aur:
-  # apps
-  - zathura # pdf reading
   # ui
   - ttf-twemoji # required for emoji's in terminals
   - plymouth-git # plymouth stable is often stale and unbuildable. Use git version instead

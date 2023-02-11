@@ -112,18 +112,20 @@ packages:
   - gopls # go language server
   - go-tools
   ## python
-  - python-pip
   - python-setuptools
   ## Ethereum
   - solidity
   ## packages
   - flatpak
   # Apps
-  - aspell
-  - aspell-en
-  - rofi
-  - rofi-calc
+  - aspell # dictionary api
+  - aspell-en # english dictionary
   - gparted
+  - rofi # launcher
+  - rofi-calc # adds calculator to rofi
+  - zathura # pdf reading
+  - zathura-cb # adds comic book support
+  - zathura-pdf-mupdf # pdf server
   # security
   - pam-u2f
   - bitwarden-cli

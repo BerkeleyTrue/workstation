@@ -47,7 +47,6 @@ packages:
   - papirus-icon-theme # needed for dunst icons
   - flameshot # screenshot util
   - nitrogen # wallpaper manager
-  - pasystray # pulse audio systray
   - picom # compositor
   - pipewire # audio
   - pipewire-alsa # alsa compat with pipewire, uninstalls alsa

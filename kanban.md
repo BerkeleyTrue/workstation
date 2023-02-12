@@ -1,5 +1,7 @@
 ## To Do
 
+- make user_space not require sudo
+- update nixpkgs
 - add tmux plugin install
 - add neovim packages
 

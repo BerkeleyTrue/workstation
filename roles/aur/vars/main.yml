@@ -2,8 +2,6 @@
 aur:
   # ui
   - ttf-twemoji # required for emoji's in terminals
-  - plymouth-git # plymouth stable is often stale and unbuildable. Use git version instead
-  - plymouth-theme-hexagon-alt-git
   - pasystray-wayland # pulse audio systray with sni support
   # general
   - lua-format

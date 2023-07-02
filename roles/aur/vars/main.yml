@@ -5,7 +5,6 @@ aur:
   - pasystray-wayland # pulse audio systray with sni support
   # general
   - lua-format
-  - handlr-bin  # mime utils written in rust 🎉
   - kmonad-bin # keyboard configurator
   # words
   - wordnet-common

@@ -4,25 +4,11 @@ npm_global_packages:
   - neovim
   - yarn
 
-  # cli
-  - clipboard-cli  # universal cli tool
-  - json
-
-  # clojurescript dev
-  - shadow-cljs
-  - nbb
-  - zprint-clj
-
   # linting
   - eslint
   - typescript
 
   # lsp
-  - "@ansible/ansible-language-server"
-  - "@prisma/language-server"
-  - "@tailwindcss/language-server"
-  - bash-language-server
-  - dockerfile-language-server-nodejs
   - emmet-ls
   - javascript-typescript-langserver
   - solidity-language-server

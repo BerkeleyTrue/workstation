@@ -22,6 +22,8 @@
             ansible-later
             ansible-lint
             yamlfix
+            yaml-language-server
+            yamllint
           ];
 
           shellHook = ''

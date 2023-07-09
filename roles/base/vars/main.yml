@@ -6,7 +6,6 @@ packages:
   # x11
   - xorg-server
   - xorg-xinit # xorg startx
-  - gobject-introspection # needed by taffybar, gtk stuff
   # general
   - acpi  # client for power, batter, and thermal
   - base-devel # base development tools
@@ -57,13 +56,9 @@ packages:
   - git # version control
   - github-cli # cli for github
   - hub # github cli also?
-  - lua-language-server
-  - yaml-language-server
-  - yamllint
   - wakatime # track editor time
   ## terminal
   - p7zip # archive utils
-  - alacritty # rusty terminal w/o ligaments, here as a backup
   - aws-cli # needed for work
   - bat  # like cat but rusty
   - bat-extras # bat extras including batman man pager
@@ -84,25 +79,17 @@ packages:
   - procs  # rusty processes
   - ripgrep
   - shfmt # shell formatter
-  - task  # taskwarrior
   - tealdeer  # TL;DR for deers (rusty)
-  - the_silver_searcher # ag: search file contents
   - thefuck # corrects errors in previous console commands
-  - timew  # timewarrior
   - tmux # terminal multiplexer
   - yad # CLI to show diaglogs
   - yadm  # yet another dotfiles manager
   - zoxide  # like cd but with more warp
   - zsh # zsh shell
   ## automation
-  - ansible
-  - ansible-lint
   - docker
   - docker-compose
   - vault # ansible vault for managing secrets
-  ## clojure dev
-  - clojure
-  - leiningen
   ## node dev
   - nodejs-lts-gallium
   - npm
@@ -128,4 +115,3 @@ packages:
   - zathura-pdf-mupdf # pdf server
   # security
   - pam-u2f
-  - bitwarden-cli

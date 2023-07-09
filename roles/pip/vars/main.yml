@@ -3,7 +3,5 @@ pips:
   - pip
   - passlib # for generating password hashes
   - pynvim
-  - yamlfix
-  - ansible-later
   - docker
   - docker-compose

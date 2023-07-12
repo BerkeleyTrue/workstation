@@ -7,6 +7,7 @@ packages:
   - xorg-server
   - xorg-xinit # xorg startx
   # general
+  - expac # alpm data (pacman database) extraction utility
   - acpi  # client for power, batter, and thermal
   - base-devel # base development tools
   - blueman # A GTK+ Bluetooth Manager
@@ -19,7 +20,7 @@ packages:
   - keybase
   - keybase-gui
   - nss-mdns # host name resolution for cups networking
-  - nix # package manager
+  - nix # a purely functional package manager
   - otf-ipafont # required to render japanese fonts
   - pkgfile # determines which package repo a file belongs to, according to /etc/pacman.conf
   - sshguard # protects ssh host from brute force attacks
@@ -60,8 +61,6 @@ packages:
   ## terminal
   - p7zip # archive utils
   - aws-cli # needed for work
-  - bat  # like cat but rusty
-  - bat-extras # bat extras including batman man pager
   - dog  # Like dig but a good boi
   - dust  # rust based disk usage utility
   - entr  #  watch files and re-run command

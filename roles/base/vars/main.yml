@@ -59,19 +59,10 @@ packages:
   - hub # github cli also?
   - wakatime # track editor time
   ## terminal
-  - p7zip # archive utils
   - aws-cli # needed for work
-  - dog  # Like dig but a good boi
-  - dust  # rust based disk usage utility
-  - entr  #  watch files and re-run command
-  - exa  # like ls but extra
-  - fd  # like find but kinder
   - figlet  # make large banners out of ascii
-  - fzf # display and filter lists in a TUI
-  - glow # cli markdown renderer
   - gfold # search and list git repos
   - kitty # rusty terminal
-  - lazygit # git tui
   - lsof # list open files running
   - neovim # better vim
   - playerctl # pause/play music players ci

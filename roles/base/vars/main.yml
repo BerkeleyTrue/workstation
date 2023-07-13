@@ -17,8 +17,6 @@ packages:
   - cups # printing services
   - gufw  # gui for ufw
   - gvfs # virtual file system implementation for GIO
-  - keybase
-  - keybase-gui
   - nss-mdns # host name resolution for cups networking
   - nix # a purely functional package manager
   - otf-ipafont # required to render japanese fonts
@@ -29,79 +27,31 @@ packages:
   - ttf-firacode-nerd # patches nerd fonts
   - udisks2 # disk management service
   - ufw # uncomplicated firewall
-  - unclutter # hid mouse when not in use
   - xbindkeys # bind keys to commands
   - xcape  # key mapping
-  - xclip # x11 clipboard cli
   - xfce4-power-manager
   - xsecurelock # secure lock screen for x11
   - xss-lock # hook into X11 screen saver extension
-  # networking
-  - bind # dns impl w/ dig
-  - curl
-  - iputils
-  - traceroute
-  - wget
   # desktop
-  - dunst # notification daemon
   - papirus-icon-theme # needed for dunst icons
-  - flameshot # screenshot util
-  - nitrogen # wallpaper manager
-  - picom # compositor
   - pipewire # audio
   - pipewire-alsa # alsa compat with pipewire, uninstalls alsa
   - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio
   - plasma-desktop # for games
   - wireplumber # audio
-  # dev
-  - git # version control
-  - github-cli # cli for github
-  - hub # github cli also?
-  - wakatime # track editor time
   ## terminal
-  - aws-cli # needed for work
-  - figlet  # make large banners out of ascii
-  - gfold # search and list git repos
-  - kitty # rusty terminal
-  - lsof # list open files running
-  - neovim # better vim
-  - playerctl # pause/play music players ci
-  - procs  # rusty processes
-  - ripgrep
-  - shfmt # shell formatter
-  - tealdeer  # TL;DR for deers (rusty)
-  - thefuck # corrects errors in previous console commands
-  - tmux # terminal multiplexer
-  - yad # CLI to show diaglogs
-  - yadm  # yet another dotfiles manager
-  - zoxide  # like cd but with more warp
+  - git # version control
   - zsh # zsh shell
   ## automation
   - docker
   - docker-compose
-  - vault # ansible vault for managing secrets
   ## node dev
   - nodejs-lts-gallium
   - npm
-  ## go Dev
-  - go
-  - gopls # go language server
-  - go-tools
-  ## python
-  - python-setuptools
-  ## Ethereum
-  - solidity
   ## packages
   - flatpak
   # Apps
   - aspell # dictionary api
   - aspell-en # english dictionary
-  - gparted
-  - rofi # launcher
-  - rofi-calc # adds calculator to rofi
-  - viewnior # fast image preview
-  - zathura # pdf reading
-  - zathura-cb # adds comic book support
-  - zathura-pdf-mupdf # pdf server
   # security
   - pam-u2f

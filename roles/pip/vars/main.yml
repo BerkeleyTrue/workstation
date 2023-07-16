@@ -1,7 +1,0 @@
----
-pips:
-  - pip
-  - passlib # for generating password hashes
-  - pynvim
-  - docker
-  - docker-compose

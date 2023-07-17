@@ -22,18 +22,15 @@ packages:
   - otf-ipafont # required to render japanese fonts
   - pkgfile # determines which package repo a file belongs to, according to /etc/pacman.conf
   - sshguard # protects ssh host from brute force attacks
-  - ttf-dejavu # required for plymouth hexagon theme
   - ttf-fira-code # required for progress ligatures in kitty conf
   - ttf-firacode-nerd # patches nerd fonts
   - udisks2 # disk management service
   - ufw # uncomplicated firewall
   - xbindkeys # bind keys to commands
   - xcape  # key mapping
-  - xfce4-power-manager
   - xsecurelock # secure lock screen for x11
   - xss-lock # hook into X11 screen saver extension
   # desktop
-  - papirus-icon-theme # needed for dunst icons
   - pipewire # audio
   - pipewire-alsa # alsa compat with pipewire, uninstalls alsa
   - pipewire-pulse # pulseaudio compat with pipewire, uninstalls PulseAudio

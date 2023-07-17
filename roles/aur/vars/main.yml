@@ -1,8 +1,5 @@
 ---
 aur:
-  # ui
-  - ttf-twemoji # required for emoji's in terminals
-  - pasystray-wayland # pulse audio systray with sni support
   # general
   - kmonad-bin # keyboard configurator
   # words

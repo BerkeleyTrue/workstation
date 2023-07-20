@@ -23,14 +23,6 @@
     enabled: true
     state: started
 
-- name: Ensure cronie is running
-  become: true
-  become_user: root
-  ansible.builtin.systemd:
-    name: cronie
-    enabled: true
-    state: started
-
 - name: Ensure UI services are enabled
   ansible.builtin.systemd:
     name: "{{ item }}"

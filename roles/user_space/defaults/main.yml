@@ -2,7 +2,6 @@
 user_space_local_share: '{{ ansible_env.HOME }}/.local/share'
 user_space_dvl_dir: '{{ ansible_env.HOME }}/dvlpmnt'
 user_space_ts_fennel: '{{ user_space_dvl_dir }}/lisp/fennel/tree-sitter-fennel'
-user_space_hls: '{{ user_space_dvl_dir }}/haskell/hls'
 user_space_crypto_egg_go: '{{ user_space_dvl_dir }}/go/src/github.com/berkeleytrue/crypto-egg-go'
 user_space_dirs:
   - '{{ user_space_ts_fennel }}'  # required for treesitter since a bug won't allow treesitter to install automatically
@@ -11,31 +10,7 @@ user_space_dirs:
   - '{{ ansible_env.HOME }}/dsk'
   - '{{ ansible_env.HOME }}/docs/notes/captainslog/'  # captains log command in shell/task.sh
   - '{{ user_space_local_share }}/x11'  # x11 logging set up in zprofile
-  - '{{ user_space_local_share }}/task'  # task logs
   - '{{ user_space_local_share }}/xmonad'  # xmonad shared bin dir and logs
-  - '{{ user_space_local_share }}/dict' # a place to put dictionairies
 
 user_space_files:
   - '{{ user_space_local_share }}/x11/x11.log'  # x11 logging set up in zprofile
-  - '{{ user_space_local_share }}/task/on-exit-sync-hook.log'  # task logs
-  - '{{ user_space_local_share }}/task/cron-update.log'  # task logs
-
-user_space_ui_services: # these are tracked by yadm
-  # tray group, binds to graphical-session-pre systray apps, this
-  # there is a xmonad.target that is started by xmonad, this binds to
-  # graphical-session and tray, and requires graphical-session-pre
-  # this kicks off starting all these services
-  - blueman-applet.service
-  - dunst.service
-  - flameshot.service
-  - network-manager-applet.service
-  - pasystray.service
-  - picom.service
-  - status-notifier-watcher.service
-  - taffybar.service
-  - tmux.service
-  - tray.target
-  - unclutter.service
-  - xcape.service
-  - xkbmap.service
-  - xplugd.service

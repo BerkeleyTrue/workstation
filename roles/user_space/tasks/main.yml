@@ -72,12 +72,6 @@
   tags:
     - fennel
 
-- name: Ensure hls repo
-  ansible.builtin.git:
-    repo: https://github.com/haskell/haskell-language-server.git
-    dest: "{{ user_space_hls }}"
-    version: 1.7.0.0
-
 - name: Ensure crypto-egg-go
   ansible.builtin.git:
     repo: https://github.com/berkeleytrue/crypto-egg-go.git
@@ -95,14 +89,6 @@
     version: master
   tags:
     - corpus
-
-- name: Ensure emoji terminal support
-  become: true
-  become_user: root
-  ansible.builtin.file:
-    src: /usr/share/fontconfig/conf.avail/75-twemoji.conf
-    dest: /etc/fonts/conf.d/75-twemoji.conf
-    state: link
 
 - name: Import services
   ansible.builtin.import_tasks: services.yml

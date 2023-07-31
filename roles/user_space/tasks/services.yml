@@ -1,12 +1,4 @@
 ---
-- name: Ensure user dir updates is masked
-  ansible.builtin.systemd:
-    name: xdg-user-dirs-update.service
-    masked: true
-    enabled: false
-    scope: user
-    state: stopped
-
 - name: Enable docker service
   become: true
   become_user: root
@@ -22,10 +14,3 @@
     name: avahi-daemon
     enabled: true
     state: started
-
-- name: Ensure UI services are enabled
-  ansible.builtin.systemd:
-    name: "{{ item }}"
-    enabled: true
-    scope: user
-  loop: "{{ user_space_ui_services }}"

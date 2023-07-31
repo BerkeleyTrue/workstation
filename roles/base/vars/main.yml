@@ -13,7 +13,6 @@ packages:
   - blueman # A GTK+ Bluetooth Manager
   - bluez # bluetooth daemons
   - bluez-utils # utils for bluetooh
-  - cronie # cron impl
   - cups # printing services
   - gufw  # gui for ufw
   - gvfs # virtual file system implementation for GIO
@@ -39,9 +38,6 @@ packages:
   ## automation
   - docker
   - docker-compose
-  ## node dev
-  - nodejs-lts-gallium
-  - npm
   ## packages
   - flatpak
   # security

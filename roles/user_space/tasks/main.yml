@@ -87,14 +87,6 @@
   tags:
     - crypto-egg
 
-- name: Ensure english dictionairy
-  ansible.builtin.shell:
-    cmd: aspell -d en dump master | aspell -l en expand > {{ user_space_local_share }}/dict/english
-  register: dict_output
-  changed_when: dict_output.rc != 0
-  tags:
-    - dict
-
 - name: Ensure Corpus wiki
   ansible.builtin.git:
     repo: https://github.com/BerkeleyTrue/corpus.git

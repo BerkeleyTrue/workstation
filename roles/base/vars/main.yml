@@ -44,8 +44,5 @@ packages:
   - npm
   ## packages
   - flatpak
-  # Apps
-  - aspell # dictionary api
-  - aspell-en # english dictionary
   # security
   - pam-u2f

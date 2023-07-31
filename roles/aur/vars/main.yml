@@ -2,6 +2,3 @@
 aur:
   # general
   - kmonad-bin # keyboard configurator
-  # words
-  - wordnet-common
-  - wordnet-cli
